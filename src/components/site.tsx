@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import { LayoutDashboard, Award, BarChart3, Users, FileQuestion, Settings } from "lucide-react";
+import { BookOpen, LayoutDashboard, Award, BarChart3, Users, FileQuestion, Settings } from "lucide-react";
 import logoAsset from "@/assets/neura-logo.png.asset.json";
 
 export function Logo({ light = false }: { light?: boolean }) {
