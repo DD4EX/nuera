@@ -1,14 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import { BookOpen, LayoutDashboard, Award, BarChart3, Users, FileQuestion, Settings, Brain } from "lucide-react";
+import { BookOpen, LayoutDashboard, Award, BarChart3, Users, FileQuestion, Settings } from "lucide-react";
+import logoAsset from "@/assets/neura-logo.png.asset.json";
 
 export function Logo({ light = false }: { light?: boolean }) {
   return (
-    <Link to="/" className="flex items-center gap-2">
-      <span className="grid h-8 w-8 place-items-center rounded-lg bg-accent text-accent-foreground">
-        <Brain className="h-4 w-4" />
-      </span>
-      <span className={`font-display text-xl font-bold tracking-tight ${light ? "text-sidebar-foreground" : "text-foreground"}`}>NEURA</span>
+    <Link to="/" className={`inline-flex w-fit items-center ${light ? "rounded-lg bg-white px-2.5 py-1.5 shadow-sm" : ""}`}>
+      <img src={logoAsset.url} alt="NEURA — Startup for AI" width={160} height={80} className="h-7 w-auto md:h-8" />
     </Link>
   );
 }
