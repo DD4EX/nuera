@@ -5,7 +5,7 @@ import logoAsset from "@/assets/neura-logo.png.asset.json";
 
 export function Logo({ light = false }: { light?: boolean }) {
   return (
-    <Link to="/" className={`inline-flex items-center ${light ? "rounded-lg bg-white px-2.5 py-1.5 shadow-sm" : ""}`}>
+    <Link to="/" className={`inline-flex w-fit items-center ${light ? "rounded-lg bg-white px-2.5 py-1.5 shadow-sm" : ""}`}>
       <img src={logoAsset.url} alt="NEURA — Startup for AI" width={160} height={80} className="h-7 w-auto md:h-8" />
     </Link>
   );
