@@ -12,7 +12,7 @@ export const Route = createFileRoute("/test/$courseId")({
 
 function Test() {
   const { courseId } = Route.useParams();
-  const c = courses.find((x) => x.id === courseId) ?? courses[0];
+  const c = courses.find((x) => x.id === courseId) ?? courses[0]!;
   const [i, setI] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>(questions.map(() => null));
   const [done, setDone] = useState(false);
@@ -23,9 +23,9 @@ function Test() {
     return () => clearInterval(t);
   }, [done]);
 
-  const score = Math.round((answers.filter((a, k) => a === questions[k].answer).length / questions.length) * 100);
+  const score = Math.round((answers.filter((a, k) => a === questions[k]!.answer).length / questions.length) * 100);
   const passed = score >= 60;
-  const q = questions[i];
+  const q = questions[i]!;
 
   return (
     <div className="min-h-screen">

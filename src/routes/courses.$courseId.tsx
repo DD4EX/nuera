@@ -11,7 +11,7 @@ export const Route = createFileRoute("/courses/$courseId")({
 
 function CourseDetail() {
   const { courseId } = Route.useParams();
-  const c = courses.find((x) => x.id === courseId) ?? courses[0];
+  const c = courses.find((x) => x.id === courseId) ?? courses[0]!;
   return (
     <div>
       <PublicHeader />

@@ -20,7 +20,7 @@ function AdminHome() {
         <div className="rounded-xl border bg-card p-5">
           <h3 className="font-semibold">Course completion</h3>
           <div className="mt-4 space-y-4">
-            {courses.map((c, i) => { const v = [72, 58, 34, 91, 45, 66][i]; return (
+            {courses.map((c, i) => { const v = [72, 58, 34, 91, 45, 66][i] ?? 0; return (
               <div key={c.id}><div className="mb-1 flex justify-between text-sm"><span>{c.title}</span><span className="text-muted-foreground">{v}%</span></div><Bar value={v} /></div>
             ); })}
           </div>

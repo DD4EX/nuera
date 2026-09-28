@@ -11,9 +11,9 @@ export const Route = createFileRoute("/learn/$courseId/$lessonId")({
 
 function Lesson() {
   const { courseId, lessonId } = Route.useParams();
-  const c = courses.find((x) => x.id === courseId) ?? courses[0];
+  const c = courses.find((x) => x.id === courseId) ?? courses[0]!;
   const idx = Math.max(0, lessons.findIndex((l) => l.id === lessonId));
-  const l = lessons[idx];
+  const l = lessons[idx]!;
   const prev = lessons[idx - 1], next = lessons[idx + 1];
   return (
     <div className="flex min-h-screen flex-col">
